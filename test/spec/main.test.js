@@ -32,6 +32,12 @@ describe('totalStocks', function(){
 
 describe('DOM', function () {
   describe('table', function () {
+    before(function(){
+      if(window.__karma__){
+        $('body').append('<table><thead></thead><tbody></tbody></table>');
+      }
+    });
+
     beforeEach(function () {
       $('tbody').empty();
     });
