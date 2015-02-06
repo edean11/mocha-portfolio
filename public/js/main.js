@@ -49,3 +49,16 @@ function getMultipleStocks(symbols, cb) {
 function hello() {
   return 'world';
 }
+
+function totalStocks(stocks){
+  var totals = [];
+  _.forEach(stocks, function(stock){
+    var total = stock.LastPrice;
+    totals.push(total);
+  });
+  return _.reduce(totals, function(sum, n) { return sum + n; });
+
+  //return _.reduce(stocks, function(prev, curr){
+  //  return prev + curr.LastPrice;
+  //}, 0);
+}
