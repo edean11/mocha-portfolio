@@ -1,0 +1,27 @@
+{
+  "name": "mocha-portfolio",
+  "version": "1.0.0",
+  "description": "Stock app with mocha testing",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "^0.12.31",
+    "phantomjs": "^1.9.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edean11/mocha-portfolio.git"
+  },
+  "author": "edean11",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edean11/mocha-portfolio/issues"
+  },
+  "homepage": "https://github.com/edean11/mocha-portfolio"
+}
