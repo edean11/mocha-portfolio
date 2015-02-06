@@ -46,6 +46,12 @@ describe('DOM', function () {
         addStockToTable(stock);
         $('tr').length.should.equal(1);
       });
+      it('should ignore a bad stock ticker', function(){
+        var stock = { Message: 'No symbol matches found for XXXX'};
+        $('tr').length.should.equal(0);
+        addStockToTable(stock);
+        $('tr').length.should.equal(0);
+      });
       it('should use stock data in the appended row', function () {
         var stock = { Name: 'SuperCorp', Symbol: 'SCRP', LastPrice: 12.34 },
             $row  = addStockToTable(stock),
@@ -72,6 +78,12 @@ describe('ASYNC', function () {
     it('should return another stock object', function (done) {
       getStock('MSFT', function (stock) {
         stock.Name.should.equal('Microsoft Corp');
+        done();
+      });
+    });
+    it('should return a message if no stock is found', function(done){
+      getStock('XXXX', function(stock){
+        stock.Message.should.exist();
         done();
       });
     });
