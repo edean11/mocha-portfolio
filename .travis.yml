@@ -11,3 +11,6 @@ script:
   - npm run test-once
 notifications:
   email: false
+env:
+  global:
+    secure: WWyTWP2230i/AbCHt5wWORn+hdKFshfmkZ0GdSxyxpOJ0Bxt5r/RU7fRGwWSZ9FjEIVevKuPgp+gyHSiHu+lcwSuL+FXfViF9GDyGxuxZvCKRL+yLP9MYakn2roxul/R5tP6pkWaDUBAR0SpYCGXx+6lZR9ef+7p0SznJyyVaRo=
